@@ -1,0 +1,27 @@
+-- Create Database
+CREATE DATABASE `E-Commerce`;
+USE `E-Commerce`;
+
+-- Create Amazon Table
+CREATE TABLE `Amazon` (
+    product_id    INT PRIMARY KEY,
+    Product_name  VARCHAR(255) NOT NULL,
+    price         DECIMAL(10, 2) NOT NULL,
+    Qty           INT NOT NULL
+);
+
+-- Insert Records
+INSERT INTO `Amazon` (product_id, Product_name, price, Qty) VALUES
+(1001, 'Apple iPhone 15 Pro',             999.99,  150),
+(1002, 'Samsung Galaxy S24 Ultra',       1199.99,   85),
+(1003, 'Sony WH-1000XM5 Headphones',      349.99,  230),
+(1004, 'Apple MacBook Air M3',           1299.99,   60),
+(1005, 'Amazon Echo Dot (5th Gen)',        49.99,  500),
+(1006, 'Kindle Paperwhite',              139.99,  320),
+(1007, 'Logitech MX Master 3S Mouse',     99.99,  175),
+(1008, 'Anker 65W USB-C Charger',         35.99,  420),
+(1009, 'Fire TV Stick 4K Max',            59.99,  290),
+(1010, 'Samsung 27" 4K Monitor',         549.99,   45);
+
+-- Verify the Data
+SELECT * FROM `Amazon`;
